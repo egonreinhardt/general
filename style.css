@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#numerais,
+#categorias,
+#acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#subtotal,
+#total-geral {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+#numerais button,
+#categorias button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#acoes {
+    margin-top: 20px;
+}
+
+dialog {
+    padding: 20px;
+}
+
+dialog button {
+    margin-top: 10px;
+    width: 100%;
+}

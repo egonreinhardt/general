@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GENERAL</h1>
+    </header>
+
+    <main>
+
+        <section id="cartela">
+
+            <section id="numerais">
+                <button class="btn-numeral" data-numero="1">
+                    <span>1</span>
+                    <span class="valor">-</span>
+                </button>
+                <button class="btn-numeral" data-numero="2">
+                    <span>2</span>
+                    <span class="valor">-</span>
+                </button>
+                <button class="btn-numeral" data-numero="3">
+                    <span>3</span>
+                    <span class="valor">-</span>
+                </button>
+                <button class="btn-numeral" data-numero="4">
+                    <span>4</span>
+                    <span class="valor">-</span>
+                </button>
+                <button class="btn-numeral" data-numero="5">
+                    <span>5</span>
+                    <span class="valor">-</span>
+                </button>
+                <button class="btn-numeral" data-numero="6">
+                    <span>6</span>
+                    <span class="valor">-</span>
+                </button>
+            </section>
+
+            <section id="subtotal">
+                <span>Subtotal</span>
+                <span id="valor-subtotal">0</span>
+            </section>
+
+            <section id="categorias">
+
+                <button class="btn-categoria" data-categoria="trinca">
+                    <span class="label">Trinca (20)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="fullHouse">
+                    <span class="label">Full House (25)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="parImpar">
+                    <span class="label">Par/Ímpar (25)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="sequenciaMenor">
+                    <span class="label">Sequência Menor (30)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="sequenciaMaior">
+                    <span class="label">Sequência Maior (35)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="quadra">
+                    <span class="label">Quadra (40)</span>
+                    <span class="valor">-</span>
+                </button>
+
+                <button class="btn-categoria" data-categoria="general">
+                    <span class="label">General (50)</span>
+                    <span class="valor">-</span>
+                </button>
+
+            </section>
+
+            <section id="total-geral">
+                <span>Total Geral</span>
+                <span>0</span>
+            </section>
+
+        </section>
+
+        <section id="acoes">
+            <button id="btn-configuracoes">Configurações</button>
+            <button id="btn-nova-partida">Nova Partida</button>
+        </section>
+
+    </main>
+
+    <!-- Diálogo de numeral -->
+    <dialog id="dialog-numeral">
+        <h2 id="titulo-numeral">Número</h2>
+
+        <div id="opcoes-numeral">
+        </div>
+
+        <button id="btn-cancelar-numeral">
+            Cancelar
+        </button>
+    </dialog>
+
+    <!-- Diálogo de categoria -->
+    <dialog id="dialog-categoria">
+        <h2>Categoria</h2>
+
+        <button></button>
+
+        <button></button>
+
+        <button>Zerar</button>
+
+        <button>Cancelar</button>
+    </dialog>
+
+    <!-- Diálogo de remoção -->
+    <dialog id="dialog-remover">
+        <h2>Pontuação já preenchida</h2>
+
+        <button>Remover</button>
+
+        <button>Cancelar</button>
+    </dialog>
+
+    <!-- Diálogo de configurações -->
+    <dialog id="dialog-configuracoes">
+        <h2>Configurações</h2>
+
+        <p>Configurações aparecerão aqui.</p>
+
+        <button>Salvar</button>
+
+        <button id="btn-fechar-configuracoes">Fechar</button>
+    </dialog>
+
+    <!-- Diálogo de confirmação -->
+    <dialog id="dialog-confirmacao">
+        <h2>Tem certeza?</h2>
+
+        <button id="btn-confirmar">Sim</button>
+
+        <button id="btn-cancelar-confirmacao">Não</button>
+    </dialog>
+
+    <!-- Diálogo de pontuação final -->
+    <dialog id="dialog-final">
+        <button>X</button>
+
+        <h2>Pontuação Final</h2>
+
+        <p>235 pontos</p>
+
+        <button>Reiniciar</button>
+    </dialog>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

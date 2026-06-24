@@ -1,8 +1,127 @@
+/* ==========================================================================
+   LOGO ESTILIZADO (GENERAL CÉSAR)
+   ========================================================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px;
+    background-color: #1a1a1a; /* Fundo escuro igual ao da imagem para destacar o logo */
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    flex-wrap: wrap; /* Garante que quebre em telas muito pequenas */
+}
+
+/* --- O DADO EM CSS --- */
+.dado-css {
+    width: 70px;
+    height: 70px;
+    background-color: #b71c1c; /* Vermelho escuro do logo */
+    border-radius: 12px;
+    position: relative;
+    transform: rotate(-15deg); /* Inclinado igual à imagem */
+    box-shadow: 
+        inset -6px -6px 0px rgba(0,0,0,0.2), 
+        3px 5px 0px #000;
+    border: 3px solid #fff;
+    flex-shrink: 0;
+}
+
+/* Pontos do dado (Simulando o número 5 destacado) */
+.dado-css .face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dado-css .ponto {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Posicionamento dos pontos */
+.dado-css .centro { top: calc(50% - 5px); left: calc(50% - 5px); }
+.dado-css .topo-esquerda { top: 12px; left: 12px; }
+.dado-css .topo-direita { top: 12px; right: 12px; }
+.dado-css .baixo-esquerda { bottom: 12px; left: 12px; }
+.dado-css .baixo-direita { bottom: 12px; right: 12px; }
+
+/* --- TEXTO DO LOGO --- */
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: 'Arial Black', Impact, sans-serif; /* Fontes robustas parecidas com o vetor */
+}
+
+.linha-general, .linha-cesar {
+    display: flex;
+}
+
+/* Estilo Geral das Letras superiores (Linha GENERAL) */
+.linha-general span {
+    color: #fbf4da; /* Bege claro da imagem */
+    font-size: 2.4rem;
+    font-weight: 900;
+    text-shadow: 3px 3px 0px #000;
+    margin-right: -2px;
+}
+
+/* Efeito alternado de cores na palavra GENERAL (algumas amarelas) */
+.linha-general span:nth-child(even) {
+    color: #f1c260; /* Amarelo queimado da imagem */
+}
+
+/* Desalinhamento proposital das letras de GENERAL */
+.linha-general span:nth-child(1) { transform: rotate(-5deg) translateY(2px); }
+.linha-general span:nth-child(2) { transform: rotate(4deg) translateY(-3px); }
+.linha-general span:nth-child(3) { transform: rotate(-3deg) translateY(1px); }
+.linha-general span:nth-child(4) { transform: rotate(6deg) translateY(-2px); }
+.linha-general span:nth-child(5) { transform: rotate(-4deg) translateY(3px); }
+.linha-general span:nth-child(6) { transform: rotate(3deg) translateY(-1px); }
+.linha-general span:nth-child(7) { transform: rotate(-6deg) translateY(4px); }
+
+/* Estilo das Letras inferiores dentro de caixas (Linha CÉSAR) */
+.linha-cesar span {
+    background-color: #64a1a4; /* Azul piscina escuro do fundo de "GAMES" */
+    color: #1a1a1a; /* Letras pretas por dentro */
+    font-size: 1.9rem;
+    padding: 2px 8px;
+    margin: 2px;
+    border: 3px solid #000;
+    box-shadow: 2px 2px 0px #000;
+    display: inline-block;
+    font-weight: 900;
+}
+
+/* Desalinhamento das caixas de CÉSAR */
+.linha-cesar span:nth-child(1) { transform: rotate(4deg); background-color: #72b2b5; }
+.linha-cesar span:nth-child(2) { transform: rotate(-6deg) translateY(-2px); }
+.linha-cesar span:nth-child(3) { transform: rotate(3deg) translateY(3px); }
+.linha-cesar span:nth-child(4) { transform: rotate(-4deg); }
+.linha-cesar span:nth-child(5) { transform: rotate(5deg) translateY(-1px); }
+
+/* Ajuste de responsividade para telas pequenas */
+@media (max-width: 440px) {
+    .linha-general span { font-size: 1.8rem; }
+    .linha-cesar span { font-size: 1.4rem; padding: 1px 5px; }
+    .dado-css { width: 50px; height: 50px; }
+    .dado-css .ponto { width: 7px; height: 7px; }
+    .dado-css .centro { top: calc(50% - 3.5px); left: calc(50% - 3.5px); }
+}
+
 body {
     font-family: Arial, sans-serif;
-    max-width: 601px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #2e7d32;
 }
 
 h1 {
@@ -21,16 +140,6 @@ button {
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
-}
-
-#subtotal,
-#total-geral {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    align-items: center;
-    margin: 20px 0;
-    font-size: 18px;
 }
 
 #numerais button,
@@ -52,3 +161,103 @@ dialog button {
     margin-top: 10px;
     width: 100%;
 }
+
+#dialog-chance {
+    min-width: 300px;
+}
+
+#dialog-chance label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#select-chance {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+/* Mantém o estilo simples apenas para o Subtotal */
+#subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #fff; /* Cor do texto para contrastar com o fundo verde da página */
+}
+
+/* ==========================================================================
+   TOTAL GERAL ESTILIZADO (Estilo Quadro Negro do Logo)
+   ========================================================================== */
+#total-geral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* O "Quadro Negro" (Fundo escuro igual ao do logo) */
+    background-color: #1a1a1a; 
+    
+    /* Limitações de tamanho pedidas */
+    max-width: 100%; /* Obedece a largura da página */
+    box-sizing: border-box;
+    padding: 10px 20px; /* Altura controlada, similar à dos botões */
+    margin: 25px 0;
+    
+    /* Bordas e Sombras estilo Cartoon */
+    border: 3px solid #000;
+    border-radius: 12px;
+    box-shadow: 0 6px 0px #000;
+    
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+}
+
+/* Texto "TOTAL GERAL" */
+#total-geral .label-total {
+    color: #fbf4da; /* Bege claro do logo */
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px #000;
+    transform: rotate(-1deg); /* Leve inclinação para seguir o estilo do topo */
+}
+
+/* O número do Score/Pontuação */
+#total-geral .valor-total {
+    background-color: #64a1a4; /* Azul piscina do logo */
+    color: #1a1a1a; /* Texto escuro dentro da caixinha */
+    font-size: 1.5rem;
+    font-weight: 900;
+    
+    /* Transforma o número em um "bloco" destacado */
+    padding: 4px 14px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px #000;
+    
+    transform: rotate(2deg); /* Inclinado para o lado oposto, dando dinâmica */
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Pequeno ajuste responsivo para telas muito estreitas */
+@media (max-width: 440px) {
+    #total-geral { padding: 8px 12px; }
+    #total-geral .label-total { font-size: 1rem; }
+    #total-geral .valor-total { font-size: 1.2rem; padding: 2px 10px; }
+}
+
+.btn-numeral .valor,
+.btn-categoria .valor {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem; /* Como essa fonte é mais fina, aumentamos o tamanho */
+    font-weight: 700;
+    color: #0d47a1; /* Azul caneta esferográfica forte */
+    transform: rotate(-1deg);
+    display: inline-block;
+}   

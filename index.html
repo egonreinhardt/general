@@ -5,14 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>GENERAL</h1>
+        <div class="logo-container">
+            <div class="dado-css">
+                <div class="face">
+                    <div class="ponto centro"></div>
+                    <div class="ponto topo-esquerda"></div>
+                    <div class="ponto topo-direita"></div>
+                    <div class="ponto baixo-esquerda"></div>
+                    <div class="ponto baixo-direita"></div>
+                </div>
+            </div>
+            
+            <div class="logo-texto">
+                <div class="linha-general">
+                    <span>G</span><span>e</span><span>n</span><span>e</span><span>r</span><span>a</span><span>l</span>
+                </div>
+                <div class="linha-cesar">
+                    <span>C</span><span>é</span><span>s</span><span>a</span><span>r</span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -47,7 +66,7 @@
             </section>
 
             <section id="subtotal">
-                <span>Subtotal </span>
+                <span>Subtotal</span>
                 <span id="valor-subtotal">0</span>
             </section>
 
@@ -91,8 +110,8 @@
             </section>
 
             <section id="total-geral">
-                <span>Total Geral</span>
-                <span>0</span>
+                <span class="label-total">Total Geral</span>
+                <span class="valor-total" id="valor-total-geral">0</span>
             </section>
 
         </section>
@@ -129,6 +148,27 @@
         <button>Cancelar</button>
     </dialog>
 
+    <!-- Diálogo da Chance -->
+<dialog id="dialog-chance">
+
+    <h2>Chance</h2>
+
+    <label for="select-chance">
+        Pontuação:
+    </label>
+
+    <select id="select-chance"></select>
+
+    <button id="btn-confirmar-chance">
+        Confirmar
+    </button>
+
+    <button id="btn-cancelar-chance">
+        Cancelar
+    </button>
+
+</dialog>
+
     <!-- Diálogo de remoção -->
     <dialog id="dialog-remover">
         <h2>Pontuação já preenchida</h2>
@@ -140,13 +180,18 @@
 
     <!-- Diálogo de configurações -->
     <dialog id="dialog-configuracoes">
-        <h2>Configurações</h2>
 
-        <p>Configurações aparecerão aqui.</p>
-
-        <button>Salvar</button>
-
-        <button id="btn-fechar-configuracoes">Fechar</button>
+        <h2>Categorias Ativas</h2>
+            <div id="lista-configuracoes"></div>
+                <button id="btn-salvar-configuracoes">
+                     Salvar
+                </button>
+                <button id="btn-restaurar-configuracoes">
+                    Restaurar Padrões
+                </button>
+                <button id="btn-fechar-configuracoes">
+                    Fechar
+                </button>
     </dialog>
 
     <!-- Diálogo de confirmação -->
